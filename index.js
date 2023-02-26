@@ -23,7 +23,7 @@ app.get('/', (req,res)=>{
 
 //custom middleware
 app.use(employeeRoutes);
-app.use(cors());
+app.use(cors);
 
 const PORT = process.env.PORT || 4000;
 
