@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const db = require('./db/connect');
 const cors = require('cors');
-app.use(cors());
+
 
 //Importing routes
 const employeeRoutes = require('./routes/employees.route');
@@ -17,7 +17,7 @@ db();
 
  //To parser JSON object
 app.use(express.json());   
-
+app.use(cors());
 app.get('/', (req,res)=>{
     res.send('Welcome to my app');
 })
