@@ -21,6 +21,7 @@ router.get('/employees', (req, res)=>{
 router.get('/employees/:empID', (req, res)=>{
     try{
         const employeeID = req.params.empID
+        console.log(employeeID);
         Employees.findOne({_id: req.params.empID},(err, data) => {
             if(err){
                 return res.status(400).send({message: 'Error while retrieving employee details..'});
